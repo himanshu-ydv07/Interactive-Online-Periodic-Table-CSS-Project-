@@ -1,0 +1,116 @@
+/* ====== Global Styles ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* ====== Header ====== */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ====== Periodic Table Grid ====== */
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 100px);
+    gap: 5px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ====== Element Card ====== */
+.element {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.element:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ====== Element Content ====== */
+.atomic-number {
+    font-size: 12px;
+}
+
+.symbol {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.name {
+    font-size: 12px;
+    text-align: center;
+}
+
+.mass {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* ====== Category Colors ====== */
+.alkali { background-color: #ff7675; }
+.alkaline { background-color: #fab1a0; }
+.transition { background-color: #74b9ff; }
+.metalloid { background-color: #55efc4; }
+.nonmetal { background-color: #81ecec; }
+.halogen { background-color: #a29bfe; }
+.noble { background-color: #ffeaa7; }
+.lanthanide { background-color: #fdcb6e; }
+.actinide { background-color: #e17055; }
+
+/* ====== Legend ====== */
+.legend {
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* ====== Info Panel ====== */
+.info-panel {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: none;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+    .periodic-table {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+    }
+}
